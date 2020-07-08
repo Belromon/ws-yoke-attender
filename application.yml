@@ -16,9 +16,15 @@ spring:
     username: postgres
     password: postgres
 
+eureka:
+ client:
+   serviceUrl:
+     defaultZone: http://localhost:8761/eureka/
+
 yoke:
   notify:
-    url: http://localhost:8082/event
+     url: http://ws-yoke-notify/event
+    #url: http://localhost:8085/event
 
 server:
   port: 8084
